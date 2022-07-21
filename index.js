@@ -26,7 +26,7 @@ app.get('/elements', (req, res) => {
 
 // error 404
 app.get('*', (req, res) => {
-    res.status(404).sendFile(__dirname + "/public/404notfound.html");
+    res.render('404');
 });
 
 // oyente de peticiones
