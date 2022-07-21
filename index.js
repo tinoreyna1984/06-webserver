@@ -26,7 +26,7 @@ app.get('/elements', (req, res) => {
 
 // error 404
 app.get('*', (req, res) => {
-    res.render('404');
+    res.render('404', {titulo: "Not found"});
 });
 
 // oyente de peticiones
