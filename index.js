@@ -1,26 +1,22 @@
 require('dotenv').config();
-const express = require("express");
+/* const express = require("express");
+const app = express(); */
 const cors = require("cors");
-const app = express();
 const port = process.env.PORT || 4000;
 const hbs = require("hbs");
-
-console.log(process.env.PORT);
+const app = require('./src/app');
 
 // hbs
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials'); // registrar partials
 
-// Servir contenido estático
-app.use(express.static("public"));
-
 // CORS
 app.use(cors());
 
 // Rutas
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
     res.render('home', {titulo: "Principal"});
-});
+}); */
 
 app.get('/generic', (req, res) => {
     res.render('generic', {titulo: "Generic"});
