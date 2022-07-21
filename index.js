@@ -14,10 +14,6 @@ hbs.registerPartials(__dirname + '/views/partials'); // registrar partials
 app.use(cors());
 
 // Rutas
-/* app.get('/', (req, res) => {
-    res.render('home', {titulo: "Principal"});
-}); */
-
 app.get('/generic', (req, res) => {
     res.render('generic', {titulo: "Generic"});
 });
