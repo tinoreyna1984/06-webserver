@@ -1,4 +1,6 @@
 {
+  "version": 2,
+  "name": "06-webserver",
   "builds": [
       {
           "src": "index.js",
