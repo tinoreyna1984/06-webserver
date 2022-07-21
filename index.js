@@ -7,9 +7,10 @@ const app = require('./src/app');
 
 // hbs
 const viewsPath = path.join(__dirname, './views');
+console.log('viewsPath: ', viewsPath);
 app.set('view engine', 'hbs');
 app.set('views', viewsPath)
-hbs.registerPartials(__dirname + '/views/partials'); // registrar partials
+hbs.registerPartials(viewsPath + '/partials'); // registrar partials
 
 // CORS
 app.use(cors());
